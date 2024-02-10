@@ -16,3 +16,26 @@ const slides = [
 		"tagLine":"Autocollants <span>avec découpe laser sur mesure</span>"
 	}
 ]
+
+// Ajoutez des Event Listeners sur les flèches 
+
+// Définition de la fonction changeSlide
+function changeSlide(direction) {
+    // Logique pour changer de slide
+    console.log('Changement de slide, direction : ' + direction);
+}
+// Initialisation des écouteurs d'événements après la définition de la fonction
+document.addEventListener('DOMContentLoaded', () => {
+    const arrowLeft = document.querySelector('.arrow_left');
+    const arrowRight = document.querySelector('.arrow_right');
+
+    arrowLeft.addEventListener('click', () => {
+        console.log('Clic sur la flèche gauche');
+        changeSlide(-1);
+    });
+
+    arrowRight.addEventListener('click', () => {
+        console.log('Clic sur la flèche droite');
+        changeSlide(1);
+    });
+});
